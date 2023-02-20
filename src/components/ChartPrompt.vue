@@ -17,6 +17,8 @@ import {
 import { Line } from 'vue-chartjs'
 //import * as chartConfig from './chartConfig.js'
 
+import Vue from 'vue'
+
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -37,7 +39,10 @@ interface DynamoDBMetricsData {
   read_utilization_ratio_datapoints: number[];
 }
 
-export default {
+//before
+//export default{
+// what change
+export default Vue.extend ({
   name: 'ChartPrompt',
   components: {
     Line
@@ -111,6 +116,6 @@ export default {
       }
     }
   }
-}
+})
 </script>
 
